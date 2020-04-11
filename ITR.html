@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -94,21 +94,63 @@
             display: block;
         }
         
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
+        form {
+            border: 5px solid #000000;
+            width: 500px;
+            height: 300px;
+            text-align: left;
+            margin: 0 auto;
+        }
+        
+        input[type=text],
+        input[type=number],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: rgb(70, 68, 182);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
             width: 100%;
         }
         
-        td,
-        th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
+        button:hover {
+            opacity: 0.8;
         }
         
-        tr:nth-child(even) {
-            background-color: #dddddd;
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+            border: 5px solid ivory;
+        }
+        
+        .container {
+            padding: 16px;
+        }
+        
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+        
+        @media screen and (max-width: 200px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -130,11 +172,11 @@
     <!-- NAVIGATION KEYS-->
 
     <div class="topnav">
-        <a class="active" href="contact us.html">contact us</a>
+        <a href="contact us.html">contact us</a>
         <a href="#news">Feedback</a>
         <div class="dropdown">
             <button class="dropbtn">about us  
-                </button>
+                    </button>
             <div class="dropdown-content">
                 <a href="History.pdf" target="_blank">History of direct taxation</a>
                 <a href="vision-mission.pdf" target="_blank">Vision, Mission, Values</a>
@@ -145,49 +187,27 @@
         <br>
         <br>
     </div>
-    <div style="border: 5px;">
-        <table>
-            <tr>
-                <th>Income tax department</th>
-                <th>Phone number</th>
-            </tr>
-            <tr>
-                <td>
-                    <h3>Aaykar Sampark Kendra (ASK)</h3>Income tax/PAN/TAN <br> General Queries</td>
-                <td>18001801961/1961</td>
-            </tr>
-            <tr>
-                <td>
-                    <h3>PAN/TAN</h3>
-                    <PAN/TAN update <br> <a href="www.tin-nsdl.com" target="_blank">www.tin-nsdl.com </a></td>
-                <td>+912027218080</td>
-            </tr>
-            <tr>
-                <td>
-                    <h3>e-Filing of Income Tax Return</h3>​e-Filing Login<br><a href="http://incometaxindiaefiling.gov.in/" target="_blank">http://incometaxindiaefiling.gov.in/</a></td>
-                <td>1800 103 0025<br> +91-80-46122000
-                    <br> +91-80-26500026
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3>Refund/Refund re-issue/Rectification</h3>Refund/Refund re-issue/Rectification</td>
-                <td>18001034455<br> +91-80-46605200
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3>TDS Centralised Processing Centre (TRACES)</h3>AaykarBhawan, Sector-3, Vaishali, Ghaziabad, U.P. - 201010
-                    <a href="www.tdscpc.gov.in" target="_blank">www.tdscpc.gov.in</a>
-                </td>
-                <td>
-                    18001030344<br> +911204814600
-                    <br> contactus@tdscpc.gov.in
-                </td>
-            </tr>
-        </table>
-    </div>
+    <div>
+        <h2 style="text-align:center;">ITR Status</h2>
 
+        <form action="/action_page.php" method="post">
+            <div class="container">
+                <label for="number"><b>PAN Number</b></label>
+                <input type="number" placeholder="Enter PAN Number" name="number" required>
+                <br>
+
+                <label for="number"><b>Acknowledgement number</b></label>
+                <input type="number" placeholder="Enter Adhaar number" name="number" required><br>
+
+                <button type="submit">Link Adhaar</button>
+
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
